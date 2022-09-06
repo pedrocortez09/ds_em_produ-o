@@ -1,0 +1,48 @@
+Modelos de Machine Learning
+
+1.0) A tarefa supervisionada: Você ensina o computador através das features (variáveis) o comportamento de determinado objeto.
+
+
+1.1)	<<<<Tafera de Classificação>>> 
+- Voce ensina o modelo a classificar um objeito através das entradas, e as saídas seriam as respostas. Por exemplo: Classificar doenças, onde a entrada seriam os sintomas e as classes seriam as Doenças.
+
+
+1.2)	<<<<Tafera de Regressão>>> 
+- O que muda aqui é a variavel resposta onde antes na classificação era uma classe, porém aqui elas são numeros. Preço de um carro baseado em algumas features por exemplo.
+
+
+1.3)	<<<<Tafera de Previsão>>> 
+- Como o próprio nome diz, através das features ele consegue prever o comportamento de um objeto ou acontecimento. Por exemplo, previsão de receita, novos usuarios, de custos, etc.
+
+
+
+
+
+2.0) A tarefa não-supervisionada: Voce não ensina o computador qual a resposta certa, ele observa por si próprio e classifica a variavel.
+
+
+
+2.1)	<<<<Tafera de Clusterização>>> 
+- Através de caracteristicas similares, o algoritmo classifica as variavéis em grupos
+
+
+
+
+1.0) A tarefa Semi-Supervisionada: Sistema de ação e recompensa. O agente faz uma ação sobre o ambiente que vai devolver uma recompensa. Com isso ele aprende quais ações fazer para receber recompensas positivas.
+Ela é dividida em duas etapas, a de Explorantion e a Exploitation. Um exemplo é a escolha para capa de uma serie da Netflix.
+
+
+
+
+
+<<<<<<<<<<<<<<<<<<<<MELHORES MODELOS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+1 - Modelo de Média -> Ser uma base comparativa para outros modelos. É um modelo simples, mas serve como um baseline para comparar com outros modelos.
+
+2 - Linear Regression ->  
+
+3 - Linear Regression Regularized -> 
+
+4 - Random Forest Regressor ->
+
+5 - XGBoost Regressor ->

@@ -1,0 +1,21 @@
+
+
+1 - Descrição dos dados: 
+
+2 - Feature Engineering:
+
+3 - Filtragem de Variaveis:
+
+4 - Analise Exploratória dos Dados:
+
+5 - Preparação dos Dados:
+
+6 - Seleção de variáveis com Algoritmo
+
+7 - Modelos de Machine Learning
+
+8 - Hyperparameter Fine Tuning
+
+9 - Interpretação e Tradução do Erro
+
+10 - Deploy do Modelo em Produção

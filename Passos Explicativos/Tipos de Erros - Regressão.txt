@@ -1,0 +1,39 @@
+Performance do Modelo de Regressão:
+
+
+y -> Valor real
+
+yhat -> Predição
+
+
+
+MAE (Mean Absolute Error) -> Voce calcula através da formula:   ∑ | (y - yhat) | / N
+ - Atribui peso igual para todos os erros, ja que nós tiramos a  média. Então previsões muito diferentes acabam tendo o mesmo peso de uma menor.
+- Robusto na presença de outliers.
+- Facil entendimento para equipe de negócio.
+
+
+
+MAPE (Mean Absolute Percentage Error) ->    ∑ | (y - yhat) | / y x 100/N
+- Mostra o  quão longe a predição está do valor real, na média, em porcetagem.
+- Muito usado na divulgação de resultados
+- Não pode ser usado se sua variavel resposta for 0 (o y).
+
+
+RMSE (Root Mean Square Error)  ->  ∑  (y - yhat)² / N depois tira raiz pra voltar a unidade de medida
+- Atribui maior peso aos outliers
+- Sensivel a presença de outliers
+- Ideal para medir performances de ML 
+
+
+
+MPE (Mean Percentage Error) -> ∑  (y - yhat / y) x 100/N
+- Não é usado para medir performance do modelo
+- Útil para entender se modelo está superestimando ou subestimando
+- Não pode ser usado quando a variavel resposta for 0
+
+
+
+Para medir a performance do modelo: RMSE
+
+Para passar as informações para equipe de negocio: MAE, MAPE, MPE

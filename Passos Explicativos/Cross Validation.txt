@@ -1,0 +1,5 @@
+Cross Validation:
+
+- Depois de usarmos os algoritmos de Machine Learning, devemos testar o resultado obtido com o Cross Validation. Pelo fato dos dados de teste poderem ser muito diferentes das outras partes, pode acontecer do resultado ser incorreto. 
+
+- Portanto, nesse método separamos os dados de teste, e usando o método de Cross, nós pegamos os dados restantes e separamos em varias partes. Pegamos uma parte para teste (validação), e o restante como treino, e vamos pegando os resultados de varios destes testes. Então tiramos a média dos erros e usamos ela.

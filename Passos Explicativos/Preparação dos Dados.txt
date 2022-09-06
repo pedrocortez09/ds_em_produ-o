@@ -1,0 +1,41 @@
+ Preparação dos Dados:
+
+1 - Normalização -> Restaura o centro pra zero com desvio padrao igual a 1
+
+2 - Rescaling -> Restaura pra intervalos de 0 à 1, onde é mais usado em variaveis que não possuem uma distribuição normal. 
+2.1 - MinMaxScaler -> Muito ruim usar quando temos outliers muito alto pra influenciar
+2.2 - Robust Scaler -> Bom pra variaveis em que outliers irão influenciar.
+
+
+3 - Transformação -> Transformar a variavel resposta o mais proximo de uma distribuição normal, ja que o algoritmo de ML foi preparado com essa premissa. Além disso, transformar variaveis que tenham um comportamento ciclico para o que o algoritmo entenda dessa maneira, como: meses do ano, dias da semana.
+
+Métodos:
+
+1 - One Hot Encoding - Cria uma matriz onde as variaveis são as linhas e as colunas, e então enumera 0 ou 1 caso sejam iguais. Muito simples de aplicar, porém cria novas colunas o que pode ser prejucial para o aprendizado do modelo. Ex: Usar em feriados, pois são estados completamente diferentes entre dias normais e feriados.
+
+2 - Label Encoding - Enumera as variaveis sem alguma relação. Bom ser usado apenas quando as variaveis são nomes, como nomes de loja, coisas que nao tenha ligação
+
+3 - Ordinal Encoding - Enumera as variaveis com uma ordem especifica. Exemplo: Frio, quente, muito quente. baixo, médio, alto.
+
+4 - Target Encoding - Bom ser usado quanto se tem muitas variaveis, como cores por exemplo. No lugar da variavel voce coloca a média de vendas (variavel resposta) por exemplo que teve com aquela variavel categorica.
+
+5 - Frequency Encoding - Da mesma forma do Target, voce substitui a variavel com a media ou o total de ocorrencias da variavel resposta.
+
+6 - Embedding Encoding - Mantem uma relação de proximidade das palavras dependendo do contexto, e traduz isso em numeros.  
+
+
+
+Transformação da variavel resposta:
+
+Objetivo: Transformar a variavel resposta o mais proximo de uma distribuição normal, ja que o algoritmo de ML foi preparado com essa premissa. Além disso, transformar variaveis que tenham um comportamento ciclico para o que o algoritmo entenda dessa maneira, como: meses do ano, dias da semana.
+
+1 - Logarithm Transformation - Transformam distribuições que tenham a skew muito a direita ou a esquerda para uma normal;
+
+2 - Box-Cox Transformation - 
+
+3 - Cube-Root Transformation - 
+
+4 - Square-Root Transformation - 
+
+5 - Sine and Cosine Transformation - 
+

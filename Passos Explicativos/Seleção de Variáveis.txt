@@ -1,0 +1,11 @@
+Na seleção de variáveis, vamos selecionar as mais relevantes para o modelo, e excluir aquelas duplicadas que explicam o fenomeno do mesmo jeito. Deixar do jeito mais simples.
+
+Cada variável explica uma parte do fenomeno, o que desejamos aqui é selecionar as variaveis de modo que todo o fenomeno consiga ser explicado.
+
+Métodos:
+
+1 - Seleção Univariada (Filter Methods) -  "Coeficiente de Correlação" vai de -1 (forte negativamente) até 1 (forte positivamente).  Método simples, facil e de rapido entendimento. Porém não considera a influencia entre as variáveis.
+
+2 - Método embutido - O proprio algoritmo seleciona as variaveis mais relevantes. Random Forest por exemplo.
+
+3 - Seleção por Subset - Voce pega uma varivel qualquer e treina no modelo ML. Ele dará um resultado da performance seja em acuracia ou erro. Então voce adiciona uma outra varivel e recalcula a performance. Se aumentou voce mantem a variavel e adiciona outra.
