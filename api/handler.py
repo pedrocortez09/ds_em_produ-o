@@ -4,46 +4,46 @@ from flask import Flask, request, Response
 from rossmann.Rossmann import Rossmann
 
 # loading model
-model = pickle.load( open('C:/Users/Pedro/Desktop/Data Science/Comunidade DS/Data Science em Produção/model/model_rossmann.pkl', 'rb') )
+model = pickle.load( open( '/home/pedro/Documentos/repos/sales_prediction_rossmann_store/model/model_rossmann.pkl', 'rb') )
 
 # initialize API
-app = Flask(__name__)
+app = Flask( __name__ )
 
+@app.route( '/rossmann/predict', methods=['POST'] )
 
-@app.route('/rossmann/predict', methods=['POST'])
 def rossmann_predict():
-
+    print('iniciando')
+    
     test_json = request.get_json()
-
-    if test_json:  # there is data
-
-        if isinstance(test_json, dict):  # unique example
-            test_raw = pd.DataFrame(test_json, index=[0])
-
-        else:  # multiple example
-            test_raw = pd.DataFrame(test_json, columns=test_json[0].keys())
-
+    
+    if test_json: # there is data
+        
+        if isinstance( test_json, dict ): # unique example
+            test_raw = pd.DataFrame( test_json, index=[0] )
+            
+        else: # multiple example
+            test_raw = pd.DataFrame( test_json, columns=test_json[0].keys() )
+            
         # Instantiate Rossmann class
         pipeline = Rossmann()
-
+        
         # data cleaning
-        df1 = pipeline.data_cleaning(test_raw)
-
+        df1 = pipeline.data_cleaning( test_raw )
+        
         # feature engineering
-        df2 = pipeline.feature_engineering(df1)
-
+        df2 = pipeline.feature_engineering( df1 )
+        
         # data preparation
-        df3 = pipeline.data_preparation(df2)
-
+        df3 = pipeline.data_preparation( df2 )
+        
         # prediction
-        df_response = pipeline.get_prediction(model, test_raw, df3)
-
+        df_response = pipeline.get_prediction( model, test_raw, df3 )
+        
         return df_response
-#        return Response(df_response, status=200, mimetype='application/json')
-
+    
     else:
-        return Response('{}', status=200, mimetype='application/json')
-
-
+        return Response( '{}', status=200, mimetype='application/json' )
+    
+    
 if __name__ == '__main__':
-    app.run('192.168.15.59', port=5000)
+    app.run( '0.0.0.0')
